@@ -62,6 +62,14 @@ if (question5 === 'YES' || question5 === 'Y'){
   console.log('Well, actually I do like those types of novels' + ' ' + question5 + sp + counterWrong);
   alert ('Well, actually I do like that those types of novels' + sp + counterWrong);
 }
+var question6 = prompt ('Guess a number between 1 and 20, I\'ll give you 4 tries');
+while (guessNumberGame < 4 ) {
+  alert ('Guess again');
+  if (question6 === 8) {
+    alert ('Yep, you got it! ');
+  }
+}
+
 var petArray = ['MONKEY', 'FISH', 'HEN'];
 var guessTries = 0;
 var question7;
