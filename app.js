@@ -1,5 +1,5 @@
+var userName = prompt ('Hello what\'s your name?').toUpperCase();
 function hello(){
-  var userName = prompt ('Hello what\'s your name?').toUpperCase();
   console.log ('Hello ' + userName + ' , nice to meet you!');
   alert ('Hello ' + userName + ' nice to meet you! I have a guessing game I would like you to play. Click the "ok" button to contiune.');
 }
@@ -8,6 +8,8 @@ hello();
 
 var counterRight = 0;
 var counterWrong = 0;
+var userQuestions = ['Would you believe, I\'ve raised four chickens from little chicks to hens?','Do you think I think cooking is one of the most relaxing thing ever?','The most fun I have in any of my days is playing with my kids(Yes) or wash dishes after dinner(No)?','Yes or No, I currently have a garden project in my new place?','The books I read most often are sci-fyi military novels!','Guess a number between 1 and 20, I\'ll give you 4 tries','In this question I\'ll give you a chance to guess a pet I had other than a cat or dog?'];
+var yesOrNoQuestions = ['Y', 'YES', 8, 4];
 
 function answerCounterTotals(){
   var counterScore = 'Your current score is';
@@ -15,8 +17,8 @@ function answerCounterTotals(){
 }
 
 function q1(){
-  var question1 = prompt ('Would you believe, I\'ve raised four chickens from little chicks to hens?').toUpperCase();
-  if (question1 === 'Y' || question1 === 'YES' ){
+  var question1 = prompt (userQuestions[0]).toUpperCase();
+  if (question1 === yesOrNoQuestions[0] || question1 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log ('Yep, Yep ' + question1 + ' ' + counterRight);
     alert ('I did, their names were Sunny, Scritch, Sammy, Scratch! ' + question1 + ' correct ' + counterRight);
@@ -32,9 +34,9 @@ function q1(){
 q1();
 
 function q2(){
-  var question2 = prompt ('Do you think I think cooking is one of the most relaxing thing ever?').toUpperCase();
+  var question2 = prompt (userQuestions[1]).toUpperCase();
 
-  if (question2 === 'YES' || question2 === 'Y'){
+  if (question2 === yesOrNoQuestions[0] || question2 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log ('Yea, great guess ' + question2 + ' ' + counterRight);
     alert ('That\'s right, great guess!, I think it is one of the most relaxing thing! Corret Total Is ' + counterRight);
@@ -49,8 +51,8 @@ function q2(){
 q2();
 
 function q3(){
-  var question3 = prompt ('The most fun I have in any of my days is playing with my kids(Yes) or wash dishes after dinner(No)?').toUpperCase();
-  if (question3 === 'YES' || question3 === 'Y'){
+  var question3 = prompt (userQuestions[2]).toUpperCase();
+  if (question3 === yesOrNoQuestions[0] || question3 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log ('Yep, nothing more fun ' + question3 + ' ' + counterRight);
     alert('Yep, nothing more fun in the world! correct answers: ' + counterRight );
@@ -65,8 +67,8 @@ function q3(){
 q3();
 
 function q4(){
-  var question4 = prompt ('Yes or No, I currently have a garden project in my new place?').toUpperCase();
-  if (question4 === 'YES' || 'Y'){
+  var question4 = prompt (userQuestions[3]).toUpperCase();
+  if (question4 === yesOrNoQuestions[0] || question4 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log ('Yess, I love fresh vegies they taste so much better ' + question4 + ' ' + counterRight);
     alert('Yesss, I love fresh veg\'s they taste so much better! correct: ' + counterRight);
@@ -81,8 +83,8 @@ function q4(){
 q4();
 
 function q5(){
-  var question5 = prompt ('The books I read most often are sci-fyi military novels!').toUpperCase();
-  if (question5 === 'YES' || question5 === 'Y'){
+  var question5 = prompt (userQuestions[4]).toUpperCase();
+  if (question5 === yesOrNoQuestions[0] || question5 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log('That\'s right ' + question5 + ' ' + counterRight);
     alert ('You guessed right! correct: ' + counterRight);
@@ -97,16 +99,16 @@ q5();
 
 function q6(){
   var guessNumberGame = 0;
-  var answer = 8;
+  var answer = yesOrNoQuestions[2];
   while (guessNumberGame < 4 ) {
-    var question6 = parseInt(prompt ('Guess a number between 1 and 20, I\'ll give you 4 tries'));
+    var question6 = parseInt(prompt (userQuestions[5]));
     console.log(typeof questio6);
-    if (question6 === 8) {
+    if (question6 === yesOrNoQuestions[2]) {
       alert ('You won!' );
       guessNumberGame = 4;
-    } else if (question6 > 8) {
+    } else if (question6 > yesOrNoQuestions[2]) {
       alert ('That\'s to high');
-    } else if (question6 < 8) {
+    } else if (question6 < yesOrNoQuestions[2]) {
       alert ('That\'s to low');
     } else {
       alert('Number please.');
@@ -120,9 +122,8 @@ q6();
 function q7(){
   var petArray = ['MONKEY', 'FISH', 'HEN'];
   var guessTries = 0;
-  var decreaseTries = 6;
   while (guessTries < 6) {
-    var question7 = prompt ('In this question I\'ll give you ' + decreaseTries + ' tries to guess one of these. What is a pet I had other than a cat or dog?').toUpperCase();
+    var question7 = prompt (userQuestions[6]).toUpperCase();
     for (i = 0; i < petArray.length; i++) {
       if (question7 === petArray[i]) {
         alert ('That\'s right! ' + petArray + ' correct: ' + counterRight);
@@ -134,12 +135,10 @@ function q7(){
       }
     }
     guessTries ++;
-    decreaseTries --;
-    alert('Sorry that is an incorrect answer, try\'s left: ' + decreaseTries);
   }
 }
 
 q7();
 
 answerCounterTotals();
-prompt ( 'Yeaaaa, ' + userName + ' you finished! Your total score for this game is ' + counterRight + ' Thanks for playing!');
+alert ( 'Yeaaaa, ' + userName + ' you finished! Your total score for this game is ' + counterRight + ' Thanks for playing!');
