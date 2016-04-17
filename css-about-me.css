@@ -1,0 +1,40 @@
+
+body {
+  background-color: rgb(224,224,224);
+  border-style: inset;
+  border-width: thin;
+  padding: 20px;
+}
+
+h2 {
+  background-color: rgb(43,27,8);
+  border-color: inset;
+  border-width: thick;
+  padding: inherit;
+  font-family:serif;
+  color: white;
+  font-weight: lighter;
+}
+
+a {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+a :hover{
+  color:rgb (255,255,255);
+}
+
+#Bio {
+  font-family: serif;
+  font-weight:bold;
+  font-stretch: expanded;
+  border-style: double;
+  border-width: thin;
+}
+
+#Hobbies {
+  font-family:serif;
+  font-size: 16px;
+  font-style: oblique;
+  font
+}
