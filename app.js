@@ -26,11 +26,11 @@ function answerCounterTotals() {
 }
 
 function q1(){
-  var question1 = prompt (userQuestions[0]).toUpperCase();
+  var question1 = prompt(userQuestions[0]).toUpperCase();
   if (question1 === yesOrNoQuestions[0] || question1 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log ('Yep, Yep ' + question1 + ' ' + counterRight);
-    alert ('I did, their names were Sunny, Scritch, Sammy, Scratch! ' + question1 + ' correct ' + counterRight);
+    alert('I did, their names were Sunny, Scritch, Sammy, Scratch! ' + question1 + ' correct ' + counterRight);
   } else {
     counterWrong ++;
     console.log ('Well actually I did, crazy I know; they even had names: Sammy, Sunny, Scritch, Scratch. Wrong Total is ' + counterWrong);
@@ -39,28 +39,28 @@ function q1(){
 };
 
 function q2(){
-  var question2 = prompt (userQuestions[1]).toUpperCase();
+  var question2 = prompt(userQuestions[1]).toUpperCase();
 
   if (question2 === yesOrNoQuestions[0] || question2 === yesOrNoQuestions[1]){
     counterRight ++;
     console.log ('Yea, great guess ' + question2 + ' ' + counterRight);
-    alert ('That\'s right, great guess!, I think it is one of the most relaxing thing! Corret total is ' + counterRight);
+    alert('That\'s right, great guess!, I think it is one of the most relaxing thing! Corret total is ' + counterRight);
   } else {
     counterWrong ++;
     console.log ('Well actually I thinking cooking is one of the best things ever!' + question2 + ' ' + counterWrong);
-    alert ('I thinking cooking is one of the best things ever! Wrong = ' + counterWrong);
+    alert('I thinking cooking is one of the best things ever! Wrong = ' + counterWrong);
   }
 }
 
 function q3(){
-  var question3 = prompt (userQuestions[2]).toUpperCase();
+  var question3 = prompt(userQuestions[2]).toUpperCase();
   if (question3 === yesOrNoQuestions[0] || question3 === yesOrNoQuestions[1]){
     counterRight ++;
-    console.log ('Yep, nothing more fun ' + question3 + ' ' + counterRight);
+    console.log('Yep, nothing more fun ' + question3 + ' ' + counterRight);
     alert('Yep, nothing more fun in the world! Correct answers: ' + counterRight );
   } else {
     counterWrong ++;
-    console.log ('Come on, dishes are the worst! ' + question3 + ' ' + counterWrong);
+    console.log('Come on, dishes are the worst! ' + question3 + ' ' + counterWrong);
     alert('Come on, dishes are the worst! Now your Wrong answers total: ' + counterWrong);
   }
 }
@@ -100,16 +100,16 @@ function q6(){
     console.log(typeof questio6);
     if (question6 === yesOrNoQuestions[2]) {
       counterRight++;
-      alert ('You won! Your toal correct answers is: ' + counterRight );
+      alert('You won! Your toal correct answers is: ' + counterRight );
       guessNumberGame = 4;
       console.log('You won! Your total correct answers for the game is: ' + ' counterRighttotals' + counterRight);
     } else if(question6 > yesOrNoQuestions[2]) {
       totalTries --;
-      alert ('That\'s to high, you have ' + totalTries + ' tries left');
+      alert('That\'s to high, you have ' + totalTries + ' tries left');
       console.log('TotalTriesLeft ' + totalTries + ' TotalGuesses ' + guessNumberGame );
     } else if (question6 < yesOrNoQuestions[2]) {
       totalTries --;
-      alert ('That\'s to low , you have ' + totalTries + ' tries left');
+      alert('That\'s to low , you have ' + totalTries + ' tries left');
       console.log('TotalTriesLeft ' + totalTries + ' TotalGuesses ' + guessNumberGame);
     } else {
       alert('Number please.');
